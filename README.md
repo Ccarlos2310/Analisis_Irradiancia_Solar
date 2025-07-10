@@ -57,7 +57,7 @@ Se graficaron las funciones de probabilidad acumulada (CDF) para estimar la prob
 
 ### Serie completa
 
-Se graficó la serie completa en tres periodos de tres años. Se observó un patrón estacional anual: máximos durante verano y mínimos en invierno, con picos promedio > 1000 W/m².
+Se graficó la serie completa en tres periodos de ocho años. Se observó un patrón estacional anual: máximos durante verano y mínimos en invierno, con picos promedio > 1000 W/m².
 
 ### Promedio diario por día del año
 
