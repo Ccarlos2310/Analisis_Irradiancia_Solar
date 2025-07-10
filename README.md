@@ -83,6 +83,16 @@ Se aplicó ACF y PACF a las series diaria y horaria.
 - En la **serie diaria**, hubo autocorrelación fuerte en el rezago 1 (lag=1), indicando persistencia. La ACF decayó lentamente, lo cual sugiere tendencia o estacionalidad semanal.
 - En la **serie horaria** (incluyendo valores cero por la noche), se observaron picos en múltiplos de 24 horas (lag=24, 48, 72…), confirmando estacionalidad diaria clara.
 
+### Detección de anomalías con Isolation Forest
+
+Se aplicó el algoritmo `Isolation Forest` para identificar posibles valores anómalos en la variable `Irradiancia_Global_Horizontal`, utilizando un umbral de contaminación del 1% (`contamination=0.01`). Esta técnica es útil para detectar puntos atípicos sin necesidad de suposiciones sobre la distribución de los datos.
+
+Los resultados mostraron que se detectaron **N** anomalías (donde *N* es el número impreso al final del script). Estas anomalías fueron visualizadas en rojo sobre la curva de irradiancia en función del tiempo.
+
+La gráfica mostró que las anomalías se concentraron principalmente en ciertos periodos específicos, lo que puede deberse a mediciones erróneas, condiciones climáticas inusuales o fallas instrumentales. Esta información es valiosa tanto para depurar datos como para futuras mejoras en el monitoreo y modelado.
+
+El uso de `Isolation Forest` permite mejorar la robustez del análisis, ya que destaca observaciones que se comportan de forma significativamente distinta al patrón general, sin requerir un modelo supervisado.
+
 ## Conclusiones generales
 
 El análisis realizado demostró que la localidad evaluada presenta condiciones altamente favorables para el aprovechamiento de energía solar. La `Irradiancia_Global_Horizontal` mostró una estacionalidad consistente, con máximos regulares durante los meses de verano, mientras que el `Indice_Claridad` indicó cielos predominantemente despejados durante gran parte del año.
